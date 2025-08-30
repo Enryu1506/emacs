@@ -4,10 +4,11 @@
 #+STARTUP: showeverything
 #+OPTIONS: toc:2
 * IMPORTANT PROGRAMS TO LOAD FIRST
-To keep this =config.org= a reasonable length, I have moved a lot of code to individual scripts that will be sourced by this config.  These scripts are found in "~/.config/emacs/scripts" and do not contain any code that most people are likely to need to edit.
+To keep this =config.org= a reasonable length, I have moved a lot of code to individual scripts that will be sourced by this config.  These scripts are found in "~/.config/emacs/scripts" and do not contain any code that most people are likely to need to edit.(desktop-save-mode 1)
 
 ** Adding the scripts directory to path
 #+begin_src emacs-lisp
+;;; -*- lexical-binding: t -*-
 (add-to-list 'load-path "~/.config/emacs/scripts/")
 #+end_src
 
@@ -260,7 +261,6 @@ By default, Emacs creates automatic backups of files in their original directori
 #+end_src 
 
 * DASHBOARD
-
 * DIMINISH
 This package implements hiding or abbreviation of the modeline displays (lighters) of minor-modes.  With this package installed, you can add ':diminish' to any use-package block to hide that particular mode in the modeline.
 
@@ -532,9 +532,9 @@ The following settings are simple modes that are enabled (or disabled) so that E
 
 * THEME
 #+begin_src emacs-lisp
-(use-package gruvbox-theme
+(use-package catppuccin-theme
   :config
-  (load-theme 'gruvbox-dark-hard t))
+  (load-theme 'catppuccin t))
 #+end_src
 * Auctex
 #+begin_src emacs-lisp 
